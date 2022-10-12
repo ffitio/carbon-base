@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>base-component-dto</artifactId>
+    <artifactId>base-component-context</artifactId>
     <packaging>jar</packaging>
 
     <url>https://carbon.ffit.io</url>
     <name>${project.artifactId}</name>
-    <description>dto components</description>
+    <description>context component</description>
 
     <licenses>
         <license>
@@ -43,8 +43,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.fastjson2</groupId>
-            <artifactId>fastjson2</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

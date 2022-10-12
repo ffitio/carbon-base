@@ -1,5 +1,7 @@
 package io.ffit.carbon.response;
 
+import com.alibaba.fastjson2.annotation.JSONField;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -35,10 +37,12 @@ public class MultiResponse<T> extends Response {
         this.data = data;
     }
 
+    @JSONField(serialize = false)
     public boolean isEmpty() {
         return data == null || data.isEmpty();
     }
 
+    @JSONField(serialize = false)
     public boolean isNotEmpty() {
         return !isEmpty();
     }

@@ -41,12 +41,6 @@
         <developerConnection>scm:git:ssh://git@github.com:ffitio/carbon-base.git</developerConnection>
     </scm>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -58,6 +52,12 @@
             <dependency>
                 <groupId>io.ffit.carbon</groupId>
                 <artifactId>base-component-exception</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.ffit.carbon</groupId>
+                <artifactId>base-component-context</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

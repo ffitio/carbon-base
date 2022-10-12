@@ -1,5 +1,7 @@
 package io.ffit.carbon.response;
 
+import com.alibaba.fastjson2.annotation.JSONField;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -76,10 +78,12 @@ public class PageResponse<T> extends Response {
         return this.total % this.pageSize == 0 ? this.total / this.pageSize : (this.total / this.pageSize) + 1;
     }
 
+    @JSONField(serialize = false)
     public boolean isEmpty() {
         return null == data || data.isEmpty();
     }
 
+    @JSONField(serialize = false)
     public boolean isNotEmpty() {
         return !isEmpty();
     }
